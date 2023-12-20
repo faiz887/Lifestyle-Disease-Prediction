@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-red-500 text-white p-4 text-center">
+      <h1 class="text-3xl font-bold">Heart Disease Prediction</h1>
+    </header>
+
+    <!-- Heart Disease Information Section -->
+    <section class="text-left p-8">
+      <h2 class="text-2xl font-semibold mb-4">Understanding Heart Disease</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Heart disease is a complex condition influenced by various factors.
+        Predictive models, leveraging advanced technologies, help assess risks
+        based on patient data. Fill in the form below for a personalized
+        prediction.
+      </p>
+    </section>
+
+    <!-- Heart Disease Prediction Form Section -->
+    <section class="max-w-md mx-auto bg-white p-8 shadow-md mt-8">
+      <!-- Form Heading -->
+      <h2 class="text-2xl font-semibold mb-4">Heart Disease Prediction Form</h2>
+
+      <!-- Form Fields -->
+      <form id="heartDiseaseForm">
+        <!-- Field 1: Age -->
+        <div class="mb-4">
+          <label for="age" class="block text-gray-700 text-sm font-bold mb-2"
+            >Age:</label
+          >
+          <input
+            type="number"
+            id="age"
+            name="age"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter the age of the patient"
+            required
+          />
+        </div>
+
+        <!-- Field 2: Sex -->
+        <div class="mb-4">
+          <label for="sex" class="block text-gray-700 text-sm font-bold mb-2"
+            >Sex:</label
+          >
+          <select
+            id="sex"
+            name="sex"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+
+        <!-- Field 3: Chest Pain Type -->
+        <div class="mb-4">
+          <label
+            for="chestPainType"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Chest Pain Type:</label
+          >
+          <input
+            type="text"
+            id="chestPainType"
+            name="chestPainType"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter chest pain type"
+            required
+          />
+        </div>
+
+        <!-- Field 4: Resting Blood Pressure -->
+        <div class="mb-4">
+          <label
+            for="restingBP"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Resting Blood Pressure:</label
+          >
+          <input
+            type="number"
+            id="restingBP"
+            name="restingBP"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter resting blood pressure"
+            required
+          />
+        </div>
+
+        <!-- Field 5: Serum Cholesterol -->
+        <div class="mb-4">
+          <label
+            for="cholesterol"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Serum Cholesterol:</label
+          >
+          <input
+            type="number"
+            id="cholesterol"
+            name="cholesterol"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter serum cholesterol"
+            required
+          />
+        </div>
+
+        <!-- Field 6: Fasting Blood Sugar -->
+        <div class="mb-4">
+          <label
+            for="fastingBS"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Fasting Blood Sugar:</label
+          >
+          <select
+            id="fastingBS"
+            name="fastingBS"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Greater than 120 mg/dl</option>
+            <option value="0">Less than or equal to 120 mg/dl</option>
+          </select>
+        </div>
+
+        <!-- Field 7: Resting ECG Results -->
+        <div class="mb-4">
+          <label
+            for="restingECG"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Resting ECG Results:</label
+          >
+          <input
+            type="text"
+            id="restingECG"
+            name="restingECG"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter resting ECG results"
+            required
+          />
+        </div>
+
+        <!-- Field 8: Maximum Heart Rate Achieved -->
+        <div class="mb-4">
+          <label for="maxHR" class="block text-gray-700 text-sm font-bold mb-2"
+            >Maximum Heart Rate Achieved:</label
+          >
+          <input
+            type="number"
+            id="maxHR"
+            name="maxHR"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter maximum heart rate achieved"
+            required
+          />
+        </div>
+
+        <!-- Field 9: Exercise-Induced Angina -->
+        <div class="mb-4">
+          <label
+            for="exerciseAngina"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Exercise-Induced Angina:</label
+          >
+          <select
+            id="exerciseAngina"
+            name="exerciseAngina"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+          </select>
+        </div>
+
+        <!-- Field 10: Oldpeak -->
+        <div class="mb-4">
+          <label
+            for="oldpeak"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Oldpeak (ST Depression):</label
+          >
+          <input
+            type="number"
+            id="oldpeak"
+            name="oldpeak"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter oldpeak (ST depression)"
+            required
+          />
+        </div>
+
+        <!-- Field 11: ST Slope -->
+        <div class="mb-4">
+          <label
+            for="stSlope"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >ST Slope:</label
+          >
+          <input
+            type="text"
+            id="stSlope"
+            name="stSlope"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter ST slope"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600"
+          >
+            Predict Heart Disease
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      // JavaScript for form submission
+      document
+        .getElementById("heartDiseaseForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // You can add logic here to handle the form submission (e.g., send data to a server)
+          alert("Form submitted!"); // Replace this with your actual submission logic
+        });
+    </script>
+  </body>
+</html>

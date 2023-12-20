@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disease Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-blue-500 text-white p-4 text-center">
+      <h1 class="text-3xl font-bold">
+        Disease Prediction Using Machine Learning
+      </h1>
+    </header>
+
+    <!-- Brief Section -->
+    <section class="text-center p-8 mt-10">
+      <h2 class="text-2xl font-semibold mb-4">
+        Empower Your Health: Discover, Prevent, and Thrive with Our Disease
+        Prediction Platform
+      </h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Taking precautions and staying informed about various diseases is
+        crucial for maintaining good health. Technology plays a vital role in
+        disease prediction and prevention. By leveraging data and advanced
+        analytics, we can make informed decisions to protect ourselves and our
+        communities.
+      </p>
+    </section>
+
+    <!-- Options Section (Centered) -->
+    <section class="flex justify-center mt-8 space-x-4">
+      <!-- Diabetes -->
+      <div
+        class="group cursor-pointer p-8 bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-blue-100"
+        onclick="navigateTo('diabetes.html')"
+      >
+        <h2 class="text-xl font-semibold mb-4">Diabetes</h2>
+        <p class="text-gray-600">
+          Diabetes is a chronic condition that affects how your body turns food
+          into energy. It can lead to serious health problems, and early
+          detection is crucial for effective management.
+        </p>
+      </div>
+
+      <!-- Heart Disease -->
+      <div
+        class="group cursor-pointer p-8 bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-blue-100"
+        onclick="navigateTo('heart.html')"
+      >
+        <h2 class="text-xl font-semibold mb-4">Heart Disease</h2>
+        <p class="text-gray-600">
+          Heart disease refers to conditions that involve narrowed or blocked
+          blood vessels, leading to various heart-related issues. Identifying
+          risk factors early can help prevent complications.
+        </p>
+      </div>
+
+      <!-- Pneumonia -->
+      <div
+        class="group cursor-pointer p-8 bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-blue-100"
+        onclick="navigateTo('pneumonia.html')"
+      >
+        <h2 class="text-xl font-semibold mb-4">Pneumonia</h2>
+        <p class="text-gray-600">
+          Pneumonia is an infection that inflames air sacs in the lungs. Early
+          diagnosis is essential for appropriate treatment and to prevent the
+          spread of the infection.
+        </p>
+      </div>
+
+      <!-- Kidney Disease -->
+      <div
+        class="group cursor-pointer p-8 bg-white shadow-md transition-transform transform hover:scale-105 hover:bg-blue-100"
+        onclick="navigateTo('kidney.html')"
+      >
+        <h2 class="text-xl font-semibold mb-4">Kidney Disease</h2>
+        <p class="text-gray-600">
+          Kidney disease involves damage to the kidneys, affecting their ability
+          to filter blood. Detecting kidney issues early can help slow or
+          prevent further damage.
+        </p>
+      </div>
+    </section>
+
+    <!-- Lifestyle Information Section -->
+    <section class="text-center p-8 mt-14">
+      <p class="text-gray-700 text-lg mb-4">
+        In today's fast-paced world, lifestyle choices significantly contribute
+        to the rise in various health conditions. Poor diet, lack of exercise,
+        stress, and inadequate sleep can lead to chronic diseases. Being mindful
+        of your health and adopting a balanced lifestyle is crucial to prevent
+        these conditions.
+      </p>
+    </section>
+
+    <script>
+      function showAlert(disease) {
+        alert("Selected Disease: " + disease);
+      }
+
+      function navigateTo(page) {
+        window.location.href = page;
+      }
+    </script>
+  </body>
+</html>

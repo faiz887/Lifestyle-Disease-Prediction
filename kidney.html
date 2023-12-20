@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kidney Disease Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-green-500 text-white p-4 text-center">
+      <h1 class="text-3xl font-bold">Kidney Disease Prediction</h1>
+    </header>
+
+    <!-- Kidney Disease Information Section -->
+    <section class="text-left p-8">
+      <h2 class="text-2xl font-semibold mb-4">Understanding Kidney Disease</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Kidney disease is a serious condition that can affect various aspects of
+        health. AI systems can assist in predicting kidney disease based on
+        specific health indicators. Fill in the form below for a personalized
+        prediction.
+      </p>
+    </section>
+
+    <!-- Kidney Disease Prediction Form Section -->
+    <section class="max-w-md mx-auto bg-white p-8 shadow-md mt-8">
+      <!-- Form Heading -->
+      <h2 class="text-2xl font-semibold mb-4">
+        Kidney Disease Prediction Form
+      </h2>
+
+      <!-- Form Fields -->
+      <form id="kidneyDiseaseForm">
+        <!-- Field 1: Age -->
+        <div class="mb-4">
+          <label for="age" class="block text-gray-700 text-sm font-bold mb-2"
+            >Age:</label
+          >
+          <input
+            type="number"
+            id="age"
+            name="age"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter the age"
+            required
+          />
+        </div>
+
+        <!-- Field 2: Blood Pressure -->
+        <div class="mb-4">
+          <label
+            for="bloodPressure"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Blood Pressure:</label
+          >
+          <input
+            type="text"
+            id="bloodPressure"
+            name="bloodPressure"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter blood pressure"
+            required
+          />
+        </div>
+
+        <!-- Field 3: Specific Gravity -->
+        <div class="mb-4">
+          <label
+            for="specificGravity"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Specific Gravity:</label
+          >
+          <input
+            type="text"
+            id="specificGravity"
+            name="specificGravity"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter specific gravity"
+            required
+          />
+        </div>
+
+        <!-- Field 4: Albumin -->
+        <div class="mb-4">
+          <label
+            for="albumin"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Albumin:</label
+          >
+          <input
+            type="text"
+            id="albumin"
+            name="albumin"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter albumin"
+            required
+          />
+        </div>
+
+        <!-- Field 5: Sugar -->
+        <div class="mb-4">
+          <label for="sugar" class="block text-gray-700 text-sm font-bold mb-2"
+            >Sugar:</label
+          >
+          <input
+            type="text"
+            id="sugar"
+            name="sugar"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter sugar"
+            required
+          />
+        </div>
+
+        <!-- Field 6: Red Blood Cells -->
+        <div class="mb-4">
+          <label
+            for="redBloodCells"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Red Blood Cells:</label
+          >
+          <input
+            type="text"
+            id="redBloodCells"
+            name="redBloodCells"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter red blood cell count"
+            required
+          />
+        </div>
+
+        <!-- Field 7: White Blood Cell Count -->
+        <div class="mb-4">
+          <label
+            for="whiteBloodCellCount"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >White Blood Cell Count:</label
+          >
+          <input
+            type="text"
+            id="whiteBloodCellCount"
+            name="whiteBloodCellCount"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter white blood cell count"
+            required
+          />
+        </div>
+
+        <!-- Field 8: Hypertension -->
+        <div class="mb-4">
+          <label
+            for="hypertension"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Hypertension:</label
+          >
+          <select
+            id="hypertension"
+            name="hypertension"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 9: Diabetes Mellitus -->
+        <div class="mb-4">
+          <label
+            for="diabetesMellitus"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Diabetes Mellitus:</label
+          >
+          <select
+            id="diabetesMellitus"
+            name="diabetesMellitus"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- ... (Continue adding fields based on your requirements) -->
+
+        <!-- Submit Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600"
+          >
+            Predict Kidney Disease
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      // JavaScript for form submission
+      document
+        .getElementById("kidneyDiseaseForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // You can add logic here to handle the form submission (e.g., send data to a server)
+          alert("Form submitted!"); // Replace this with your actual submission logic
+        });
+    </script>
+  </body>
+</html>
