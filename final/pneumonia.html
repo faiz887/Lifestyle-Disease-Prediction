@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pneumonia Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-gray-800 text-white p-4 text-center">
+      <h1 class="text-3xl font-bold">Pneumonia Prediction</h1>
+    </header>
+
+    <!-- Pneumonia Information Section -->
+    <section class="text-left p-8">
+      <h2 class="text-2xl font-semibold mb-4">Understanding Pneumonia</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Pneumonia is a respiratory infection that can impact individuals of all
+        ages. Advanced AI systems can assist in predicting pneumonia based on
+        various health indicators, including lung scans. Fill in the form below
+        for a personalized prediction.
+      </p>
+    </section>
+
+    <!-- Pneumonia Prediction Form Section -->
+    <section class="max-w-md mx-auto bg-white p-8 shadow-md mt-8">
+      <!-- Form Heading -->
+      <h2 class="text-2xl font-semibold mb-4">Pneumonia Prediction Form</h2>
+
+      <!-- Form Fields -->
+      <form id="pneumoniaForm" enctype="multipart/form-data">
+        <!-- Field 1: Age -->
+        <div class="mb-4">
+          <label for="age" class="block text-gray-700 text-sm font-bold mb-2"
+            >Age:</label
+          >
+          <input
+            type="number"
+            id="age"
+            name="age"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter the age"
+            required
+          />
+        </div>
+
+        <!-- Field 2: Gender -->
+        <div class="mb-4">
+          <label for="gender" class="block text-gray-700 text-sm font-bold mb-2"
+            >Gender:</label
+          >
+          <select
+            id="gender"
+            name="gender"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+
+        <!-- Field 3: Fever -->
+        <div class="mb-4">
+          <label for="fever" class="block text-gray-700 text-sm font-bold mb-2"
+            >Fever:</label
+          >
+          <select
+            id="fever"
+            name="fever"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 4: Cough -->
+        <div class="mb-4">
+          <label for="cough" class="block text-gray-700 text-sm font-bold mb-2"
+            >Cough:</label
+          >
+          <select
+            id="cough"
+            name="cough"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 5: Shortness of Breath -->
+        <div class="mb-4">
+          <label
+            for="shortnessOfBreath"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Shortness of Breath:</label
+          >
+          <select
+            id="shortnessOfBreath"
+            name="shortnessOfBreath"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 6: Chest Pain -->
+        <div class="mb-4">
+          <label
+            for="chestPain"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Chest Pain:</label
+          >
+          <select
+            id="chestPain"
+            name="chestPain"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 7: Fatigue -->
+        <div class="mb-4">
+          <label
+            for="fatigue"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Fatigue:</label
+          >
+          <select
+            id="fatigue"
+            name="fatigue"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 8: Muscle Pain -->
+        <div class="mb-4">
+          <label
+            for="musclePain"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Muscle Pain:</label
+          >
+          <select
+            id="musclePain"
+            name="musclePain"
+            class="w-full px-3 py-2 border rounded-md"
+            required
+          >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+
+        <!-- Field 9: Lung Scan Image Upload -->
+        <div class="mb-4">
+          <label
+            for="lungScan"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Upload Lung Scan Image:</label
+          >
+          <input
+            type="file"
+            id="lungScan"
+            name="lungScan"
+            class="w-full px-3 py-2 border rounded-md"
+            accept="image/*"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-full bg-gray-800 text-white py-2 rounded-md hover:bg-gray-900"
+          >
+            Predict Pneumonia
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      // JavaScript for form submission
+      document
+        .getElementById("pneumoniaForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // You can add logic here to handle the form submission (e.g., send data to a server)
+          alert("Form submitted!"); // Replace this with your actual submission logic
+        });
+    </script>
+  </body>
+</html>
