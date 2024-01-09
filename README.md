@@ -1,8 +1,8 @@
-# Early Lifestyle Disease Prediction
+# Lifestyle Disease Prediction
 
 ## Project Overview
 
-The "Early Lifestyle Disease Prediction" project is a web-based application that uses predictive modeling to assess an individual's risk of developing lifestyle-related diseases. The project aims to empower individuals to make informed decisions about their health by providing accurate predictions and promoting health awareness.
+The "Lifestyle Disease Prediction" project is a web-based application that uses predictive modeling to assess an individual's risk of developing lifestyle-related diseases. The project aims to empower individuals to make informed decisions about their health by providing accurate predictions and promoting health awareness.
 
 ## Project Features
 
