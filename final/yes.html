@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disease Status</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Additional CSS styles */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .result {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-3xl font-bold mb-4">Disease Status</h1>
+
+      <!-- Disease Status Section -->
+      <div class="result text-green-600">
+        <!-- Displayed message when the user has the disease -->
+        You have Diabetes.
+      </div>
+
+      <!-- Additional Information or Instructions (if needed) -->
+      <p class="text-gray-700 text-lg">
+        If you have any concerns or questions, please consult with your
+        healthcare provider.
+      </p>
+    </div>
+  </body>
+</html>

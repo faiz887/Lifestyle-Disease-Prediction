@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabetes Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-indigo-800 text-white p-4 text-center">
+      <h1 class="text-3xl font-bold">Diabetes Prediction</h1>
+    </header>
+
+    <!-- Diabetes Information Section -->
+    <section class="text-left p-8">
+      <h2 class="text-2xl font-semibold mb-4">What is Diabetes?</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Diabetes is a chronic condition affecting how your body turns food into
+        energy. It results from problems with insulin, a hormone aiding glucose
+        (sugar) to enter cells for energy. Types include Type 1 and Type 2, each
+        with unique causes and management.
+      </p>
+    </section>
+
+    <!-- Diabetes Prediction Form Section -->
+    <section class="max-w-md mx-auto bg-white p-8 shadow-md mt-8">
+      <!-- Form Heading -->
+      <h2 class="text-2xl font-semibold mb-4">Diabetes Prediction Form</h2>
+
+      <!-- Form Fields -->
+      <form id="diabetesForm" method="post" action="{{ url_for('predict') }}">
+        <!-- Field 1: Pregnancies -->
+        <div class="mb-4">
+          <label
+            for="pregnancies"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Number of Pregnancies:</label
+          >
+          <input
+            type="number"
+            id="pregnancies"
+            name="pregnancies"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter the number of times you've been pregnant"
+            required
+          />
+        </div>
+
+        <!-- Field 2: Glucose -->
+        <div class="mb-4">
+          <label
+            for="glucose"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Glucose:</label
+          >
+          <input
+            type="number"
+            id="glucose"
+            name="glucose"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your glucose concentration"
+            required
+          />
+        </div>
+
+        <!-- Field 3: Blood Pressure -->
+        <div class="mb-4">
+          <label
+            for="bloodPressure"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Blood Pressure:</label
+          >
+          <input
+            type="number"
+            id="bloodPressure"
+            name="bloodPressure"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your blood pressure"
+            required
+          />
+        </div>
+
+        <!-- Field 4: Skin Thickness -->
+        <div class="mb-4">
+          <label
+            for="skinThickness"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Skin Thickness:</label
+          >
+          <input
+            type="number"
+            id="skinThickness"
+            name="skinThickness"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your skin thickness"
+            required
+          />
+        </div>
+
+        <!-- Field 5: Insulin -->
+        <div class="mb-4">
+          <label
+            for="insulin"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Insulin:</label
+          >
+          <input
+            type="number"
+            id="insulin"
+            name="insulin"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your insulin level"
+            required
+          />
+        </div>
+
+        <!-- Field 6: BMI -->
+        <div class="mb-4">
+          <label for="bmi" class="block text-gray-700 text-sm font-bold mb-2"
+            >Body Mass Index (BMI):</label
+          >
+          <input
+            type="number"
+            id="bmi"
+            name="bmi"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your BMI (weight in kg / height in m^2)"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="dpf" class="block text-gray-700 text-sm font-bold mb-2"
+            >Diabetes Pedigree Function :</label
+          >
+          <input
+            type="number"
+            id="dpf"
+            name="dpf"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your Diabetes Pedigree Function	"
+            required
+          />
+        </div>
+
+        <!-- Field 7: Age -->
+        <div class="mb-4">
+          <label for="age" class="block text-gray-700 text-sm font-bold mb-2"
+            >Age:</label
+          >
+          <input
+            type="number"
+            id="age"
+            name="age"
+            class="w-full px-3 py-2 border rounded-md"
+            placeholder="Enter your age"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
+          >
+            Predict Diabetes
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <h2 class="text-gray-700 text-3xl font-bold mb-2">{{ prediction_text }}</h2>
+    <!-- <script>
+      // Optional: You can use JavaScript to toggle visibility based on your requirements.
+      // For example, after submitting the form, hide the form and show the prediction result.
+      // You may need to adjust this script based on your actual implementation.
+
+      // Example using vanilla JavaScript
+      document
+        .getElementById("diabetesForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Assume 'prediction_text' is set after form submission (e.g., in your Flask route)
+          const predictionText = "The person is likely to have diabetes.";
+
+          // Hide the form
+          document.querySelector(".form-section").classList.add("hidden");
+
+          // Show the prediction result
+          const predictionResult = document.querySelector(".prediction-result");
+          predictionResult.classList.remove("hidden");
+          predictionResult.innerText = predictionText;
+        });
+    </script> -->
+  </body>
+</html>
