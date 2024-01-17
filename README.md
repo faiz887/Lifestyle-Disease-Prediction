@@ -23,3 +23,11 @@ The "Lifestyle Disease Prediction" project is a web-based application that uses 
 1. Access the web application through your browser.
 2. Input your demographic and vital statistics for disease prediction.
 3. Receive an accurate prediction of your risk of developing specific lifestyle diseases.
+
+## Project Images
+
+![Image1 Description](images/img1.png)
+![Image2 Description](images/img2.png)
+![Image3 Description](images/img3.png)
+![Image4 Description](images/img4.png)
+![Image5 Description](images/img5.png)
