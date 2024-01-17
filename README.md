@@ -26,8 +26,8 @@ The "Lifestyle Disease Prediction" project is a web-based application that uses 
 
 ## Project Images
 
-![Image1 Description](images/img1.png)
-![Image2 Description](images/img2.png)
-![Image3 Description](images/img3.png)
-![Image4 Description](images/img4.png)
-![Image5 Description](images/img5.png)
+![Image1 Description](images/img1.jpeg)
+![Image2 Description](images/img2.jpeg)
+![Image3 Description](images/img3.jpeg)
+![Image4 Description](images/img4.jpeg)
+![Image5 Description](images/img5.jpeg)
