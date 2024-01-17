@@ -4,6 +4,12 @@
 
 The "Lifestyle Disease Prediction" project is a web-based application that uses predictive modeling to assess an individual's risk of developing lifestyle-related diseases. The project aims to empower individuals to make informed decisions about their health by providing accurate predictions and promoting health awareness.
 
+![Image1 Description](images/img1.jpeg)
+![Image2 Description](images/img2.jpeg)
+![Image3 Description](images/img3.jpeg)
+![Image4 Description](images/img4.jpeg)
+![Image5 Description](images/img5.jpeg)
+
 ## Project Features
 
 - Accurate prediction of lifestyle diseases based on user-provided data.
@@ -23,11 +29,3 @@ The "Lifestyle Disease Prediction" project is a web-based application that uses 
 1. Access the web application through your browser.
 2. Input your demographic and vital statistics for disease prediction.
 3. Receive an accurate prediction of your risk of developing specific lifestyle diseases.
-
-## Project Images
-
-![Image1 Description](images/img1.jpeg)
-![Image2 Description](images/img2.jpeg)
-![Image3 Description](images/img3.jpeg)
-![Image4 Description](images/img4.jpeg)
-![Image5 Description](images/img5.jpeg)
